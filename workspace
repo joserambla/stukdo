@@ -37,6 +37,7 @@
             <Folder name="views">
                 <Folder name="layouts">
                     <File name="app\views\layouts\application.html.erb" />
+                    <File name="app\views\layouts\_header.html.erb" />
                 </Folder>
                 <Folder name="pages">
                     <File name="app\views\pages\about.html.erb" />
