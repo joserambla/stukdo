@@ -78,6 +78,9 @@
             <File name="config\secrets.yml" />
         </Folder>
         <Folder name="db">
+            <Folder name="migrate">
+                <File name="db\migrate\20150504163625_devise_create_users.rb" />
+            </Folder>
             <File name="db\development.sqlite3" />
             <File name="db\seeds.rb" />
         </Folder>
