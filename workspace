@@ -7,11 +7,17 @@
                 </Folder>
                 <Folder name="javascripts">
                     <File name="app\assets\javascripts\application.js" />
+                    <File name="app\assets\javascripts\bootstrap.js.coffee" />
                     <File name="app\assets\javascripts\pages.js.coffee" />
+                    <File name="app\assets\javascripts\tasks.js.coffee" />
                 </Folder>
                 <Folder name="stylesheets">
                     <File name="app\assets\stylesheets\application.css" />
+                    <File name="app\assets\stylesheets\bootstrap_and_overrides.css" />
+                    <File name="app\assets\stylesheets\devise.css.scss" />
                     <File name="app\assets\stylesheets\pages.css.scss" />
+                    <File name="app\assets\stylesheets\scaffolds.css.scss" />
+                    <File name="app\assets\stylesheets\tasks.css.scss" />
                 </Folder>
             </Folder>
             <Folder name="controllers">
@@ -20,10 +26,12 @@
                 </Folder>
                 <File name="app\controllers\application_controller.rb" />
                 <File name="app\controllers\pages_controller.rb" />
+                <File name="app\controllers\tasks_controller.rb" />
             </Folder>
             <Folder name="helpers">
                 <File name="app\helpers\application_helper.rb" />
                 <File name="app\helpers\pages_helper.rb" />
+                <File name="app\helpers\tasks_helper.rb" />
             </Folder>
             <Folder name="mailers">
                 <File name="app\mailers\.keep" />
@@ -33,8 +41,44 @@
                     <File name="app\models\concerns\.keep" />
                 </Folder>
                 <File name="app\models\.keep" />
+                <File name="app\models\task.rb" />
+                <File name="app\models\user.rb" />
+            </Folder>
+            <Folder name="UX design">
+                <File name="app\UX design\charli.png" />
+                <File name="app\UX design\charli2.png" />
+                <File name="app\UX design\homepage.tif" />
+                <File name="app\UX design\signup.tif" />
+                <File name="app\UX design\stukdo.bmpr" />
             </Folder>
             <Folder name="views">
+                <Folder name="devise">
+                    <Folder name="confirmations">
+                        <File name="app\views\devise\confirmations\new.html.erb" />
+                    </Folder>
+                    <Folder name="mailer">
+                        <File name="app\views\devise\mailer\confirmation_instructions.html.erb" />
+                        <File name="app\views\devise\mailer\reset_password_instructions.html.erb" />
+                        <File name="app\views\devise\mailer\unlock_instructions.html.erb" />
+                    </Folder>
+                    <Folder name="passwords">
+                        <File name="app\views\devise\passwords\edit.html.erb" />
+                        <File name="app\views\devise\passwords\new.html.erb" />
+                    </Folder>
+                    <Folder name="registrations">
+                        <File name="app\views\devise\registrations\edit.html.erb" />
+                        <File name="app\views\devise\registrations\new.html.erb" />
+                    </Folder>
+                    <Folder name="sessions">
+                        <File name="app\views\devise\sessions\new.html.erb" />
+                    </Folder>
+                    <Folder name="shared">
+                        <File name="app\views\devise\shared\_links.html.erb" />
+                    </Folder>
+                    <Folder name="unlocks">
+                        <File name="app\views\devise\unlocks\new.html.erb" />
+                    </Folder>
+                </Folder>
                 <Folder name="layouts">
                     <File name="app\views\layouts\application.html.erb" />
                     <File name="app\views\layouts\_header.html.erb" />
@@ -43,6 +87,15 @@
                     <File name="app\views\pages\about.html.erb" />
                     <File name="app\views\pages\expat.html.erb" />
                     <File name="app\views\pages\home.html.erb" />
+                </Folder>
+                <Folder name="tasks">
+                    <File name="app\views\tasks\edit.html.erb" />
+                    <File name="app\views\tasks\index.html.erb" />
+                    <File name="app\views\tasks\index.json.jbuilder" />
+                    <File name="app\views\tasks\new.html.erb" />
+                    <File name="app\views\tasks\show.html.erb" />
+                    <File name="app\views\tasks\show.json.jbuilder" />
+                    <File name="app\views\tasks\_form.html.erb" />
                 </Folder>
             </Folder>
         </Folder>
@@ -61,14 +114,20 @@
                 <File name="config\initializers\assets.rb" />
                 <File name="config\initializers\backtrace_silencers.rb" />
                 <File name="config\initializers\cookies_serializer.rb" />
+                <File name="config\initializers\devise.rb" />
                 <File name="config\initializers\filter_parameter_logging.rb" />
                 <File name="config\initializers\inflections.rb" />
                 <File name="config\initializers\mime_types.rb" />
                 <File name="config\initializers\session_store.rb" />
+                <File name="config\initializers\simple_form.rb" />
+                <File name="config\initializers\simple_form_bootstrap.rb" />
                 <File name="config\initializers\wrap_parameters.rb" />
             </Folder>
             <Folder name="locales">
+                <File name="config\locales\devise.en.yml" />
+                <File name="config\locales\en.bootstrap.yml" />
                 <File name="config\locales\en.yml" />
+                <File name="config\locales\simple_form.en.yml" />
             </Folder>
             <File name="config\application.rb" />
             <File name="config\boot.rb" />
@@ -80,8 +139,10 @@
         <Folder name="db">
             <Folder name="migrate">
                 <File name="db\migrate\20150504163625_devise_create_users.rb" />
+                <File name="db\migrate\20150506165921_create_tasks.rb" />
             </Folder>
             <File name="db\development.sqlite3" />
+            <File name="db\schema.rb" />
             <File name="db\seeds.rb" />
         </Folder>
         <Folder name="lib">
@@ -90,6 +151,13 @@
             </Folder>
             <Folder name="tasks">
                 <File name="lib\tasks\.keep" />
+            </Folder>
+            <Folder name="templates">
+                <Folder name="erb">
+                    <Folder name="scaffold">
+                        <File name="lib\templates\erb\scaffold\_form.html.erb" />
+                    </Folder>
+                </Folder>
             </Folder>
         </Folder>
         <Folder name="log">
@@ -107,13 +175,17 @@
             <Folder name="controllers">
                 <File name="test\controllers\.keep" />
                 <File name="test\controllers\pages_controller_test.rb" />
+                <File name="test\controllers\tasks_controller_test.rb" />
             </Folder>
             <Folder name="fixtures">
                 <File name="test\fixtures\.keep" />
+                <File name="test\fixtures\tasks.yml" />
+                <File name="test\fixtures\users.yml" />
             </Folder>
             <Folder name="helpers">
                 <File name="test\helpers\.keep" />
                 <File name="test\helpers\pages_helper_test.rb" />
+                <File name="test\helpers\tasks_helper_test.rb" />
             </Folder>
             <Folder name="integration">
                 <File name="test\integration\.keep" />
@@ -123,6 +195,8 @@
             </Folder>
             <Folder name="models">
                 <File name="test\models\.keep" />
+                <File name="test\models\task_test.rb" />
+                <File name="test\models\user_test.rb" />
             </Folder>
             <File name="test\test_helper.rb" />
         </Folder>
@@ -132,20 +206,116 @@
                     <Folder name="development">
                         <Folder name="sass">
                             <Folder name="43f399a8b02088b39e4e4aad97d60e5cfe2b112b">
+                                <File name="tmp\cache\assets\development\sass\43f399a8b02088b39e4e4aad97d60e5cfe2b112b\devise.css.scssc" />
                                 <File name="tmp\cache\assets\development\sass\43f399a8b02088b39e4e4aad97d60e5cfe2b112b\pages.css.scssc" />
                             </Folder>
                         </Folder>
                         <Folder name="sprockets">
+                            <File name="tmp\cache\assets\development\sprockets\02ded98392707ca92fff23eb5bf728f8" />
+                            <File name="tmp\cache\assets\development\sprockets\05aee10c739de52b291c213d93ebfbd5" />
+                            <File name="tmp\cache\assets\development\sprockets\0736a2034554a91792a5956cb4fd9f7d" />
+                            <File name="tmp\cache\assets\development\sprockets\09e2a090befacdae0db10cafb1893a0a" />
+                            <File name="tmp\cache\assets\development\sprockets\118b281f4d03671e3c2bb9efc8df5197" />
+                            <File name="tmp\cache\assets\development\sprockets\12c4d84375f83547cf50e107f30ed34e" />
+                            <File name="tmp\cache\assets\development\sprockets\138ce985a359cdefd9c37d039ca52fb2" />
                             <File name="tmp\cache\assets\development\sprockets\13fe41fee1fe35b49d145bcc06610705" />
+                            <File name="tmp\cache\assets\development\sprockets\151bdf882a5655fa55a760f8023cb7ca" />
+                            <File name="tmp\cache\assets\development\sprockets\1888e538cef157dbe0a8eb5aa1aef052" />
+                            <File name="tmp\cache\assets\development\sprockets\1b7bc7bc6576bdca71a73392116fd940" />
                             <File name="tmp\cache\assets\development\sprockets\1ba2331aab000dc355521d376087bf32" />
+                            <File name="tmp\cache\assets\development\sprockets\1be92ee819b2f886fecaf0b2ad96d0c1" />
+                            <File name="tmp\cache\assets\development\sprockets\1f8d7eabf41111c5a0176cdb598296f5" />
+                            <File name="tmp\cache\assets\development\sprockets\227c994fd6b1da5d41236930b8e6b6b3" />
+                            <File name="tmp\cache\assets\development\sprockets\22a3157d204c1f8e417a25f01a2dbe45" />
+                            <File name="tmp\cache\assets\development\sprockets\269726b6ee41a1da96781cee910f2711" />
+                            <File name="tmp\cache\assets\development\sprockets\2948b285855c5ec02998f1f2971d09ab" />
+                            <File name="tmp\cache\assets\development\sprockets\299b3c36243fe53ea09e2c54270379f3" />
+                            <File name="tmp\cache\assets\development\sprockets\29e10a5b4b1dc71cd3ecbc70ac6a4430" />
+                            <File name="tmp\cache\assets\development\sprockets\2b38c3fb549036de5c4666637a0c80c6" />
+                            <File name="tmp\cache\assets\development\sprockets\2c84d83a954cd05c843d3283cc72b5d3" />
+                            <File name="tmp\cache\assets\development\sprockets\2d51a8a30e7888e91b2afc7f33b1fc7d" />
+                            <File name="tmp\cache\assets\development\sprockets\2e8ce09955639882af65c16f1c79b8e6" />
+                            <File name="tmp\cache\assets\development\sprockets\2f0c21e16a9e8d0cdb245c21693329d6" />
+                            <File name="tmp\cache\assets\development\sprockets\2f5173deea6c795b8fdde723bb4b63af" />
+                            <File name="tmp\cache\assets\development\sprockets\32fab6970b7863333da9bd318156ad9a" />
                             <File name="tmp\cache\assets\development\sprockets\357970feca3ac29060c1e3861e2c0953" />
+                            <File name="tmp\cache\assets\development\sprockets\35f1aa8ba590067c25adb275c4e017ec" />
+                            <File name="tmp\cache\assets\development\sprockets\3721d3191c57648cd0f6ecdeaf127492" />
                             <File name="tmp\cache\assets\development\sprockets\3d4805dcdd88890d259cba37ba8c2807" />
+                            <File name="tmp\cache\assets\development\sprockets\3d8917d70d7b19bb7aa9709a10f249f0" />
                             <File name="tmp\cache\assets\development\sprockets\3e6ea05dadaba4c48fa819709a3ec7f0" />
+                            <File name="tmp\cache\assets\development\sprockets\3edec39347edb82f7f93d2dd5bbb4870" />
+                            <File name="tmp\cache\assets\development\sprockets\3f5720260942a5d6667570f6a8de7f6c" />
+                            <File name="tmp\cache\assets\development\sprockets\409528f8884b80a9a03c8abdf4b070b6" />
+                            <File name="tmp\cache\assets\development\sprockets\41c5e9f11042ea28f518545c461fa7a8" />
+                            <File name="tmp\cache\assets\development\sprockets\42e62abe749927e09c1b00451c58e4a9" />
+                            <File name="tmp\cache\assets\development\sprockets\4553f72dd778656fa37a2cc13e99eb5f" />
+                            <File name="tmp\cache\assets\development\sprockets\455419827b9a8ff063b4d297fdf1d9d0" />
+                            <File name="tmp\cache\assets\development\sprockets\45dfed5b6941ec9919410ce2c714ffd9" />
+                            <File name="tmp\cache\assets\development\sprockets\4710c0552f45c60375338527a79237c1" />
+                            <File name="tmp\cache\assets\development\sprockets\495485c59c4252dfc09f0c80c0626114" />
                             <File name="tmp\cache\assets\development\sprockets\4af335dc593c29ac3247c38f39917f3b" />
+                            <File name="tmp\cache\assets\development\sprockets\4fc3f5eb37c73f75efc3cbe1b0da7968" />
+                            <File name="tmp\cache\assets\development\sprockets\511a523fde124ac5113325f9bc3e090a" />
+                            <File name="tmp\cache\assets\development\sprockets\5555d78259a64322bf80c59db46f7872" />
+                            <File name="tmp\cache\assets\development\sprockets\576ba1a6e10a864f4fb7331a37d8c568" />
                             <File name="tmp\cache\assets\development\sprockets\58d13fa8238ddbe40924e2b2b8e2b892" />
+                            <File name="tmp\cache\assets\development\sprockets\5a83d8a3e215e240a1253a410154a338" />
+                            <File name="tmp\cache\assets\development\sprockets\5cb4e5ba2b419f9c6e197587ba36ad85" />
+                            <File name="tmp\cache\assets\development\sprockets\5d1fd9518f52ba8745615c1d181e8ac9" />
+                            <File name="tmp\cache\assets\development\sprockets\608a318b8a7114628ea3a82b4e22574c" />
+                            <File name="tmp\cache\assets\development\sprockets\6505f3b163b5867aebc59da5246c82c7" />
+                            <File name="tmp\cache\assets\development\sprockets\6654975eaa53a225d976278fcb6baa00" />
+                            <File name="tmp\cache\assets\development\sprockets\695f738302378b5674a00cd6d4b03023" />
+                            <File name="tmp\cache\assets\development\sprockets\6a606b2703d23d9f23cdff2c7c4bca4b" />
+                            <File name="tmp\cache\assets\development\sprockets\6c823208e19c60e0c92f594181d538b1" />
+                            <File name="tmp\cache\assets\development\sprockets\6f85cdef0d8b9d98b198e9c9ec843867" />
+                            <File name="tmp\cache\assets\development\sprockets\74735877780c950d7cbdb307d775a0c8" />
+                            <File name="tmp\cache\assets\development\sprockets\7660cda121d0bf4c6279d3f33ceb5999" />
+                            <File name="tmp\cache\assets\development\sprockets\79b743586192cdf9d949ab7ff238e11c" />
+                            <File name="tmp\cache\assets\development\sprockets\7fea23369a595d9744a2efd2a1541c44" />
+                            <File name="tmp\cache\assets\development\sprockets\859c78a7784cf478f662874edb6ae58d" />
+                            <File name="tmp\cache\assets\development\sprockets\88a8ab788d2bd240c10bb7f2ab43824a" />
+                            <File name="tmp\cache\assets\development\sprockets\89de538c34a56632ed3990cba773c3cf" />
+                            <File name="tmp\cache\assets\development\sprockets\8d467b2390a5eab42a9d2d3d89792e32" />
+                            <File name="tmp\cache\assets\development\sprockets\8f2511830f6e103d24928dac99a5cf5a" />
                             <File name="tmp\cache\assets\development\sprockets\92efa044361244b24f34e318f7dd6f5b" />
+                            <File name="tmp\cache\assets\development\sprockets\9418f2d641625a597f84adf91f74dc68" />
+                            <File name="tmp\cache\assets\development\sprockets\9781e08e59b7f62dd8c890a05282145a" />
+                            <File name="tmp\cache\assets\development\sprockets\992a9a663e4706e8a030a01bae82153f" />
+                            <File name="tmp\cache\assets\development\sprockets\993928957397edd2dc859e041c23e783" />
+                            <File name="tmp\cache\assets\development\sprockets\9b5ef5cabf35f5c7152695935f5bac07" />
+                            <File name="tmp\cache\assets\development\sprockets\9dad44ad15825772b30551a0bb608120" />
+                            <File name="tmp\cache\assets\development\sprockets\9eafb21a16758835099150f4708dfdda" />
+                            <File name="tmp\cache\assets\development\sprockets\a16140118c177909b9d6615ccac3ca0f" />
+                            <File name="tmp\cache\assets\development\sprockets\a50aeed76a1c6370b37fb8366d59f2a4" />
+                            <File name="tmp\cache\assets\development\sprockets\ac37375c23d47d269ef8f138698cedaa" />
+                            <File name="tmp\cache\assets\development\sprockets\b2f94044e17a373d8749eb93c6933990" />
+                            <File name="tmp\cache\assets\development\sprockets\b314b063e97655c8388d1da1653b7084" />
+                            <File name="tmp\cache\assets\development\sprockets\b45cd1b3799440cc62d11b5aeea207ee" />
                             <File name="tmp\cache\assets\development\sprockets\b7cf1ee5c56fa85d2cf039f2541df071" />
+                            <File name="tmp\cache\assets\development\sprockets\b7fcfa2b105c7afc18f15ec5baf3706d" />
+                            <File name="tmp\cache\assets\development\sprockets\bc39d99ed356f65646890f1eb044eb64" />
+                            <File name="tmp\cache\assets\development\sprockets\bff2a22c3b789a56797d60c1cae3e077" />
+                            <File name="tmp\cache\assets\development\sprockets\c1ed771c4815620a61f8690b1691270c" />
+                            <File name="tmp\cache\assets\development\sprockets\c2c394da4f6b3111d0a5733fadd78b50" />
+                            <File name="tmp\cache\assets\development\sprockets\cad4e4431efac90fccbb17b5c9d11fd8" />
+                            <File name="tmp\cache\assets\development\sprockets\cc1ffaac4063f53e674de93611e89494" />
+                            <File name="tmp\cache\assets\development\sprockets\ccb8a9b08f984a44c75ace0fa85fe951" />
+                            <File name="tmp\cache\assets\development\sprockets\cffd775d018f68ce5dba1ee0d951a994" />
                             <File name="tmp\cache\assets\development\sprockets\d771ace226fc8215a3572e0aa35bb0d6" />
+                            <File name="tmp\cache\assets\development\sprockets\d84cec7ebc35e223b334100c1d971fec" />
+                            <File name="tmp\cache\assets\development\sprockets\dc8de3ca52fdde674a7e538f0e6a6281" />
+                            <File name="tmp\cache\assets\development\sprockets\e21b382154d88067a6a2b227128fe647" />
+                            <File name="tmp\cache\assets\development\sprockets\ec7f3779419da6c2787b5ea7571c7776" />
+                            <File name="tmp\cache\assets\development\sprockets\ed95635aa2c0b5b97e6cd3531a5fc1de" />
+                            <File name="tmp\cache\assets\development\sprockets\f2dda149c2bb06ea5d6a82f7f13f697f" />
+                            <File name="tmp\cache\assets\development\sprockets\f5ac33c552385b54c307120a0fc9cbbb" />
+                            <File name="tmp\cache\assets\development\sprockets\f5f738b65b700d4d150982435be7b758" />
+                            <File name="tmp\cache\assets\development\sprockets\f7cbd26ba1d28d48de824f0e94586655" />
+                            <File name="tmp\cache\assets\development\sprockets\f886a11facfad0dc63202945468179d9" />
+                            <File name="tmp\cache\assets\development\sprockets\fd2727896a0e3c1748b06dc8aeb6e043" />
+                            <File name="tmp\cache\assets\development\sprockets\ffa235ab316b2863574ec8786a5cb287" />
                         </Folder>
                     </Folder>
                 </Folder>
@@ -170,5 +340,6 @@
         <File name="Gemfile.lock" />
         <File name="Rakefile" />
         <File name="README.rdoc" />
+        <File name="workspace" />
     </Project>
 </NotepadPlus>
