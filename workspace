@@ -16,7 +16,6 @@
                     <File name="app\assets\stylesheets\bootstrap_and_overrides.css" />
                     <File name="app\assets\stylesheets\devise.css.scss" />
                     <File name="app\assets\stylesheets\pages.css.scss" />
-                    <File name="app\assets\stylesheets\scaffolds.css.scss" />
                     <File name="app\assets\stylesheets\tasks.css.scss" />
                 </Folder>
             </Folder>
