@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   def about
   end
   
-  def expat
+  def test
   end
 end

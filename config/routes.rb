@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   get 'about' => 'pages#about'
-  get 'exxxpat' => 'pages#expat'
+  get 'test' => 'pages#test'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
