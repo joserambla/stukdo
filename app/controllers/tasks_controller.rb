@@ -6,8 +6,8 @@ class TasksController < ApplicationController
 
   def index
     @to_do_tasks = current_user.tasks.where(state: "to_do")
-	@doing_tasks = current_user.tasks.where(state: "doing")
-	@done_tasks = current_user.tasks.where(state: "done")
+	  @doing_tasks = current_user.tasks.where(state: "doing")
+	  @done_tasks = current_user.tasks.where(state: "done")
     respond_with(@tasks)
   end
 

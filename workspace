@@ -135,15 +135,6 @@
             <File name="config\routes.rb" />
             <File name="config\secrets.yml" />
         </Folder>
-        <Folder name="db">
-            <Folder name="migrate">
-                <File name="db\migrate\20150504163625_devise_create_users.rb" />
-                <File name="db\migrate\20150506165921_create_tasks.rb" />
-            </Folder>
-            <File name="db\development.sqlite3" />
-            <File name="db\schema.rb" />
-            <File name="db\seeds.rb" />
-        </Folder>
         <Folder name="lib">
             <Folder name="assets">
                 <File name="lib\assets\.keep" />
@@ -340,5 +331,16 @@
         <File name="Rakefile" />
         <File name="README.rdoc" />
         <File name="workspace" />
+        <Folder name="db">
+            <Folder name="migrate">
+                <File name="db\migrate\20150504163625_devise_create_users.rb" />
+                <File name="db\migrate\20150506165921_create_tasks.rb" />
+                <File name="db\migrate\20150513093706_add_user_id_to_tasks.rb" />
+                <File name="db\migrate\20150518110310_add_state_to_tasks.rb" />
+            </Folder>
+            <File name="db\development.sqlite3" />
+            <File name="db\schema.rb" />
+            <File name="db\seeds.rb" />
+        </Folder>
     </Project>
 </NotepadPlus>
